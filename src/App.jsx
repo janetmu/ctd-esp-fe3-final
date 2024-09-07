@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import {Routes, Route} from "react-router-dom"
+=======
+import React from 'react';
+import Button from '@mui/material/Button';
+import styled from "styled-components";
+>>>>>>> efa8dad06e7162f6beadbf25c6b6a078f0a9bb0f
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from './Routes/Home'
