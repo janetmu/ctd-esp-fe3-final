@@ -1,0 +1,32 @@
+.navbar {
+  background-color: white;
+  color: #000;
+  box-shadow: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.navLinks a:hover {
+  color: rgba(136, 136, 136, 1);
+}
+
+.themeButton {
+  margin-left: auto;
+  cursor: pointer;
+}

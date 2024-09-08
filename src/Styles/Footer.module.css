@@ -1,0 +1,17 @@
+.footer {
+  background-color: white;
+  text-align: center;
+}
+
+.topBar {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
