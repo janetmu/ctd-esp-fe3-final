@@ -1,0 +1,82 @@
+/* Estilos para la navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.1rem 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para la D en rojo */
+.red {
+  color: red;
+}
+
+/* Estilo del título */
+.title {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: normal;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links de navegación */
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.navLinks a:hover {
+  color: rgba(136, 136, 136, 1);
+}
+
+/* Botón de tema */
+.themeButton {
+  /* Fondo negro */
+  border: none;
+  cursor: pointer;
+  /* Hace que el botón sea redondo */
+  display: flex;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 15%;
+}
+
+.flippedIcon {
+  transform: rotate(45deg) scaleX(-1);
+  background-color: #000;
+  color: rgb(243, 243, 199);
+
+  /* Gira el icono horizontalmente */
+}
+
+/* Estilos para tema oscuro */
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos para tema claro */
+.light {
+  background-color: #fff7fd;
+  color: #000;
+}
