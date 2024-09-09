@@ -1,0 +1,45 @@
+.footerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.redBar {
+  width: 100%;
+  background-color: #ff0000;
+  color: white;
+  display: flex;
+  justify-content: center; /* Alinea el contenido a la derecha */
+  align-items: center; /* Centra verticalmente */
+  height: 35px; /* Ajuste esta altura según lo desee */
+  font-weight: bold;
+  font-size: 1em; /* Ajuste el tamaño de la fuente si es necesario */
+  margin-top: 90px;
+}
+
+.footerContent {
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.logo {
+  width: 200px;
+  height: 40px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  filter: invert(1); /* Invierte los colores, haciendo el blanco negro */
+}

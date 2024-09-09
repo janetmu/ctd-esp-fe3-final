@@ -15,7 +15,7 @@ const Card = ({ name, username, id }) => {
   return (
     <div className={CardStyles.card}>
       <Link key={id} to={`detail/${id}`}>
-        <img src="public/images/doctor.jpg" alt="Dentist profile picture" />
+        <img src="/images/doctor.jpg" alt="Dentist profile picture" />
         <h2>{name}</h2>
         <p>{username}</p>
       </Link>
