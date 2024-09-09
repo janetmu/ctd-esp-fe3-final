@@ -25,9 +25,10 @@ const Navbar = () => {
       </Link>
       <div className={styles.rightSection}>
         <div className={styles.navLinks}>
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/favs">Favs</Link>
+          <Link to="/">Inicio</Link>
+          <Link to="/contact">Contacto</Link>
+          <Link to="/favs">Detalle Dentista</Link>
+          <Link to="/favs">Destacados</Link>
         </div>
 
         {/* Botón para cambiar el tema */}
