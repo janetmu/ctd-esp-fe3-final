@@ -15,7 +15,7 @@
   height: 35px; /* Ajuste esta altura según lo desee */
   font-weight: bold;
   font-size: 1em; /* Ajuste el tamaño de la fuente si es necesario */
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 .footerContent {
@@ -24,8 +24,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .logo {
