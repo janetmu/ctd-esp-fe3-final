@@ -1,3 +1,8 @@
+.cardsContainer {
+  margin-bottom: 50px;
+  max-width: 880px;
+}
+
 .card {
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -7,6 +12,7 @@
   margin: 20px auto;
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding-top: 30px;  
 }
 
 .card:hover {
@@ -22,7 +28,7 @@
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
   margin-bottom: 5px;
 }
@@ -34,7 +40,7 @@
 }
 
 .favButton {
-  background-color: #007bff;
+  background-color: #f1f1f1;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -45,9 +51,16 @@
 }
 
 .favButton:hover {
-  background-color: #0056b3;
+  background-color: #eceaea;
 }
 
 .favButton:active {
-  background-color: #004080;
+  background-color: #dbd7d7;
 }
+
+.starIcon {
+  color: yellow; /* Color de relleno amarillo */
+  stroke: black; /* Borde negro */
+  stroke-width: 1.2px; /* Ancho del borde */
+}
+
