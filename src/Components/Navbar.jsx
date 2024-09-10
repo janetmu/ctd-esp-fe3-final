@@ -27,7 +27,6 @@ const Navbar = () => {
         <div className={styles.navLinks}>
           <Link to="/">Inicio</Link>
           <Link to="/contact">Contacto</Link>
-          <Link to="/favs">Detalle Dentista</Link>
           <Link to="/favs">Destacados</Link>
         </div>
 

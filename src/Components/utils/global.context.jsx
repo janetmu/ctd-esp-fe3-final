@@ -1,11 +1,13 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-export const initialState = { theme: "", data: [] };
+export const initialState = { theme: "", data: [], dentist: {} };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "GET_DENTIST":
+    case "GET_DENTISTS":
       return { ...state, data: action.payload };
+    case "GET_DENTIST":
+      return { ...state, dentist: action.payload };
     default:
       throw new Error("Acción no existente");
   }
@@ -22,7 +24,7 @@ export const ContextProvider = ({ children }) => {
         "https://jsonplaceholder.typicode.com/users"
       );
       const data = await response.json();
-      dispatch({ type: "GET_DENTIST", payload: data });
+      dispatch({ type: "GET_DENTISTS", payload: data });
     }
     fetchData();
   }, []);
