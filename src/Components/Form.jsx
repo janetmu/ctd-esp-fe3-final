@@ -1,4 +1,55 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const FormContainer = styled.div`
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+`;
+
+const SubmitButton = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  text-align: center;
+  margin-top: 80px;
+`;
+
+const SuccessMessage = styled.p`
+  color: green;
+  text-align: center;
+  margin-top: 80px;
+`;
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -7,7 +58,6 @@ const Form = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
   const validateEmail = (email) => {
-    // Expresión regular para validar el formato del email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
@@ -17,7 +67,6 @@ const Form = () => {
     setError("");
     setSuccessMessage("");
 
-    // Validaciones del nombre y el email
     if (name.length <= 5) {
       setError("Por favor verifique su información nuevamente");
       return;
@@ -27,41 +76,34 @@ const Form = () => {
       return;
     }
 
-    // Mostrar mensaje de éxito si todo es válido
     setSuccessMessage(
-      `Gracias ${name}, te contactaremos cuando antes vía mail`
+      `Gracias ${name}, te contactaremos cuanto antes vía mail`
     );
     console.log({ name, email });
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Nombre completo</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Ingresa tu nombre completo"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Ingresa tu correo electrónico"
-          />
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
-    </div>
+    <FormContainer>
+      <StyledForm onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Nombre completo"
+          required
+        />
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Correo electrónico"
+          required
+        />
+        <SubmitButton type="submit">Enviar</SubmitButton>
+      </StyledForm>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+      {successMessage && <SuccessMessage>{successMessage}</SuccessMessage>}
+    </FormContainer>
   );
 };
 
