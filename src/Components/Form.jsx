@@ -69,11 +69,7 @@ const Form = () => {
     setError("");
     setSuccessMessage("");
 
-    if (name.length <= 5) {
-      setError("Por favor verifique su información nuevamente");
-      return;
-    }
-    if (!validateEmail(email)) {
+    if (name.length <= 5 || !validateEmail(email)) {
       setError("Por favor verifique su información nuevamente");
       return;
     }

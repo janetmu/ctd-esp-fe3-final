@@ -25,7 +25,7 @@ const Card = ({ name, username, id }) => {
           <p>{username}</p>
         </Link>
         <button onClick={addFav} className={CardStyles.favButton}>
-          <Star className={CardStyles.starIcon} style={{color:"yellow"}} />
+          <Star className={CardStyles.starIcon} />
         </button>
       </div>
     </div>
