@@ -59,7 +59,7 @@
 }
 
 .starIcon {
-  color: yellow; /* Color de relleno amarillo */
+  color: yellow !important; /* Color de relleno amarillo */
   stroke: black; /* Borde negro */
   stroke-width: 1.2px; /* Ancho del borde */
 }

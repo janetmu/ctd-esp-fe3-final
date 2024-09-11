@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useContextGlobalStates } from '../Components/utils/global.context';
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 const Detail = () => {
   const params = useParams();
   const { state, dispatch } = useContextGlobalStates();

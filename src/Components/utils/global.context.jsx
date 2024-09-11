@@ -8,6 +8,8 @@ const reducer = (state, action) => {
       return { ...state, data: action.payload };
     case "GET_DENTIST":
       return { ...state, dentist: action.payload };
+    case "TOGGLE_THEME": 
+      return { ...state, theme: action.payload };
     default:
       throw new Error("Acción no existente");
   }

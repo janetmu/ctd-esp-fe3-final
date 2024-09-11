@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useContextGlobalStates } from "../Components/utils/global.context";
 
 const FormContainer = styled.div`
   max-width: 400px;
@@ -52,6 +53,7 @@ const SuccessMessage = styled.p`
 `;
 
 const Form = () => {
+  const { state } = useContextGlobalStates();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -83,7 +85,7 @@ const Form = () => {
   };
 
   return (
-    <FormContainer>
+    <FormContainer className={state.theme}>
       <StyledForm onSubmit={handleSubmit}>
         <Input
           type="text"
@@ -91,6 +93,7 @@ const Form = () => {
           onChange={(e) => setName(e.target.value)}
           placeholder="Nombre completo"
           required
+          className={state.theme}
         />
         <Input
           type="email"
@@ -98,6 +101,7 @@ const Form = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
           required
+          className={state.theme}
         />
         <SubmitButton type="submit">Enviar</SubmitButton>
       </StyledForm>

@@ -42,3 +42,7 @@
   height: 40px;
   filter: invert(1); /* Invierte los colores, haciendo el blanco negro */
 }
+
+.dark {
+  filter: invert(0) !important;
+}

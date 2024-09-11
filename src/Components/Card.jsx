@@ -2,10 +2,13 @@ import React from "react";
 import CardStyles from "../Styles/Card.module.css";
 import { Link } from "react-router-dom";
 import Star from "@mui/icons-material/StarPurple500Sharp";
+import { useContextGlobalStates } from "./utils/global.context";
 
 localStorage.setItem("favs", JSON.stringify([]));
 
+
 const Card = ({ name, username, id }) => {
+  const { state } = useContextGlobalStates();
 
   const addFav = () => {
     let favs = JSON.parse(localStorage.getItem("favs"));
@@ -15,14 +18,14 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className={CardStyles.cardsContainer}>
-      <div className={CardStyles.card}>
+      <div className={`${CardStyles.card} ${state.theme}`}>
         <Link key={id} to={`detail/${id}`}>
           <img src="/images/doctor.jpg" alt="Dentist profile picture" />
           <h2>{name}</h2>
           <p>{username}</p>
         </Link>
         <button onClick={addFav} className={CardStyles.favButton}>
-          <Star className={CardStyles.starIcon} />
+          <Star className={CardStyles.starIcon} style={{color:"yellow"}} />
         </button>
       </div>
     </div>
