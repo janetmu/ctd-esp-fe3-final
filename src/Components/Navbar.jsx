@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Brightness7, NightlightSharp } from "@mui/icons-material"; // Importamos los iconos
+import { WbSunnySharp, NightlightSharp,
+} from "@mui/icons-material"; // Importamos los iconos
 import { routes } from "../Components/utils/routes";
 import styles from "../Styles/Navbar.module.css";
 import { useContextGlobalStates } from "./utils/global.context";
@@ -34,7 +35,7 @@ const Navbar = () => {
         {/* Botón para cambiar el tema */}
         <IconButton className={styles.themeButton} onClick={toggleTheme}>
           {state.theme === "dark" ? (
-            <Brightness7 />
+            <WbSunnySharp />
           ) : (
             <NightlightSharp className={styles.nightIcon} />
           )}{" "}

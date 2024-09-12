@@ -12,13 +12,16 @@ const Footer = () => {
     });
   };
 
+  const logoImg =
+    state.theme === "dark" ? "/images/DH_blanco.png" : "/images/DH.png";
+
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.redBar} onClick={scrollToTop}>
         <p className={styles.pointer}>VOLVER ARRIBA</p>
       </div>
       <div className={`${styles.footerContent} ${state.theme}`}>
-        <img src="/images/DH.png" alt="DH-logo" className={styles.logo} />
+        <img src={logoImg} alt="DH-logo" className={styles.logo} />
 
         <div className={styles.socialIcons}>
           <a href="#">

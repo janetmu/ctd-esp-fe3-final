@@ -15,7 +15,7 @@
 
 /* Estilo para la D en rojo */
 .red {
-  color: red;
+  color: red !important; /* Mantiene la D roja en todos los temas */
 }
 
 /* Estilo del título */
@@ -44,7 +44,7 @@
 }
 
 .navLinks a:hover {
-  color: rgba(136, 136, 136, 1);
+  color: rgba(136, 136, 136, 1)  !important;
 }
 
 /* Botón de tema */
@@ -53,13 +53,10 @@
   border: none;
   cursor: pointer;
   /* Hace que el botón sea redondo */
-  display: flex;
-  background-color: #000;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 15%;
+  
+  
 }
+
 
 .nightIcon {
   transform: rotate(45deg) scaleX(-1);
@@ -68,6 +65,8 @@
 
   /* Gira el icono horizontalmente */
 }
+
+
 
 
 
@@ -83,3 +82,5 @@
   background-color: #fff7fd;
   color: #000;
 }
+
+

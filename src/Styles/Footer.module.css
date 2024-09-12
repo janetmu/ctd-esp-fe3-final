@@ -8,15 +8,15 @@
 .redBar {
   width: 100%;
   background-color: #ff0000;
-  color: white;
   display: flex;
   justify-content: center; /* Alinea el contenido a la derecha */
   align-items: center; /* Centra verticalmente */
   height: 35px; /* Ajuste esta altura según lo desee */
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1em; /* Ajuste el tamaño de la fuente si es necesario */
   margin-top: 90px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .footerContent {
@@ -25,7 +25,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .logo {
@@ -39,11 +40,26 @@
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   filter: invert(1); /* Invierte los colores, haciendo el blanco negro */
 }
 
 .dark {
   filter: invert(0) !important;
+}
+
+.redBar p {
+  margin: 0;
+  color: inherit; /* Hereda el color del fondo del contenedor */
+}
+
+/* Estilos para el tema oscuro */
+.dark .redBar p {
+  color: #747474; /* Color del texto en el tema oscuro */
+}
+
+/* Estilos para el tema claro */
+.light .redBar p {
+  color: white; /* Color del texto en el tema claro */
 }
