@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
+
 .App {
-  min-height: 90vh;
+  min-height: 100vh; /* Asegura que ocupe la pantalla completa */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido entre header y footer */
 }
+
 
 body {
   margin: 0;
@@ -14,7 +19,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -54,10 +67,10 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  position: absolute;
-  bottom: 0;
+  position: relative; /* Cambia absolute a relative */
   width: 100%;
-  height: 40px;
+  height: auto; /* Ajusta la altura automática para que no haya espacio extra */
+  background-color: transparent; /* Asegura que no haya un fondo blanco */
 }
 
 footer > img {
@@ -83,9 +96,10 @@ form {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 20px;
+  padding: 0.8rem 0.8rem 0 0.8rem;
   border: 0.5px solid rgb(136, 136, 136);
+  margin: 0;
 }
 
 .card:hover {
@@ -95,8 +109,8 @@ form {
 .card-grid {
   display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
+  
+  width: 64vw;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -126,10 +140,30 @@ tr:nth-child(even) {
   color: white !important;
 }
 
-.dark * {
+.dark p {
   color: white !important;
 }
 
+.dark h2 {
+  color: white !important;
+}
 
+.dark h1 {
+  color: white !important;
+}
+
+.dark .lightIcon {
+  color: white !important;
+}
+
+.starIcon {
+  color: yellow !important; /* Color de relleno amarillo */
+  stroke: black; /* Borde negro */
+  stroke-width: 1.2px; /* Ancho del borde */
+}
+
+.dark .starIcon {
+  color: yellow !important; /* Mantén el color amarillo en el tema oscuro */
+}
 
 /* Estilos para el tema oscuro */

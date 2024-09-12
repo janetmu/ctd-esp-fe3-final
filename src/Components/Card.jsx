@@ -6,15 +6,14 @@ import { useContextGlobalStates } from "./utils/global.context";
 
 localStorage.setItem("favs", JSON.stringify([]));
 
-
 const Card = ({ name, username, id }) => {
   const { state } = useContextGlobalStates();
 
   const addFav = () => {
     let favs = JSON.parse(localStorage.getItem("favs"));
-    favs.push({id, name, username});
+    favs.push({ id, name, username });
     localStorage.setItem("favs", JSON.stringify(favs));
-  }
+  };
 
   return (
     <div className={CardStyles.cardsContainer}>

@@ -1,18 +1,30 @@
 .cardsContainer {
-  margin-bottom: 50px;
-  max-width: 880px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100vh; /* Ajusta el ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  margin-bottom: 20px;
 }
 
 .card {
+  flex: 0 0 calc(25% - 10px); /* 4 tarjetas por fila */
+  box-sizing: border-box;
+
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-  margin: 20px auto;
+
+  width: 250px; /* Aumenta el ancho de las tarjetas */
+  height: 380px; /* Aumenta ligeramente la altura */ /* Ajustar la altura para dar forma rectangular */
+
+  /* Separación entre las tarjetas */
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  padding-top: 30px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card:hover {
@@ -21,33 +33,33 @@
 }
 
 .card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+  width: 220px;
+  height: 240px;
+  border-radius: 3%;
+  padding: 8px;
 }
 
 .card h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
-  margin-bottom: 5px;
 }
 
 .card p {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
 }
 
 .favButton {
   background-color: #f1f1f1;
   color: white;
   border: none;
-  padding: 10px 20px;
+
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .favButton:hover {
@@ -64,13 +76,6 @@
   stroke-width: 1.2px; /* Ancho del borde */
 }
 
-.heartIcon {
-  color: transparent; /* Corazón sin relleno por defecto */
-  stroke: black; /* Borde negro */
-  stroke-width: 1.5px; /* Ancho del borde */
-}
-
-.heartIcon.filled {
-  color: red !important; /* Corazón relleno de rojo al seleccionarlo */
-  stroke: none; /* Sin borde cuando está relleno */
+.dark .starIcon {
+  color: yellow !important; /* Mantén el color amarillo en el tema oscuro */
 }

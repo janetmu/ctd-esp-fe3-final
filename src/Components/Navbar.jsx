@@ -33,9 +33,9 @@ const Navbar = () => {
         </div>
 
         {/* Botón para cambiar el tema */}
-        <IconButton className={styles.themeButton} onClick={toggleTheme}>
+        <IconButton onClick={toggleTheme}>
           {state.theme === "dark" ? (
-            <WbSunnySharp />
+            <WbSunnySharp className={styles.lightIcon} />
           ) : (
             <NightlightSharp className={styles.nightIcon} />
           )}{" "}

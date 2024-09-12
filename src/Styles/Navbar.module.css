@@ -44,31 +44,21 @@
 }
 
 .navLinks a:hover {
-  color: rgba(136, 136, 136, 1)  !important;
+  color: rgba(136, 136, 136, 1) !important;
 }
-
-/* Botón de tema */
-.themeButton {
-  /* Fondo negro */
-  border: none;
-  cursor: pointer;
-  /* Hace que el botón sea redondo */
-  
-  
-}
-
 
 .nightIcon {
   transform: rotate(45deg) scaleX(-1);
   color: #000;
-  
 
   /* Gira el icono horizontalmente */
 }
 
+.lightIcon {
+  color: white;
 
-
-
+  /* Gira el icono horizontalmente */
+}
 
 /* Estilos para tema oscuro */
 .dark {
@@ -76,11 +66,8 @@
   color: #fff;
 }
 
-
 /* Estilos para tema claro */
 .light {
   background-color: #fff7fd;
   color: #000;
 }
-
-
