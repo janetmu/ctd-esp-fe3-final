@@ -5,13 +5,11 @@ import Star from "@mui/icons-material/StarPurple500Sharp";
 import { useContextGlobalStates } from "./utils/global.context";
 import Swal from 'sweetalert2'
 
-localStorage.setItem("favs", JSON.stringify([]));
-
 const Card = ({ name, username, id }) => {
   const { state } = useContextGlobalStates();
 
   const addFav = () => {
-    let favs = JSON.parse(localStorage.getItem("favs"));
+    let favs = JSON.parse(localStorage.getItem("favs")) || [];
     favs.push({ id, name, username });
     localStorage.setItem("favs", JSON.stringify(favs));
     Swal.fire({
