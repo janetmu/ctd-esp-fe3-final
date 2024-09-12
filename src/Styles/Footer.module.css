@@ -9,11 +9,11 @@
   width: 100%;
   background-color: #ff0000;
   display: flex;
-  justify-content: center; /* Alinea el contenido a la derecha */
-  align-items: center; /* Centra verticalmente */
-  height: 35px; /* Ajuste esta altura según lo desee */
+  justify-content: center; 
+  align-items: center; 
+  height: 35px; 
   font-weight: 500;
-  font-size: 1em; /* Ajuste el tamaño de la fuente si es necesario */
+  font-size: 1em; 
   margin-top: 30px;
   cursor: pointer;
   padding: 5px;
@@ -47,19 +47,4 @@
 
 .dark {
   filter: invert(0) !important;
-}
-
-.redBar p {
-  margin: 0;
-  color: inherit; /* Hereda el color del fondo del contenedor */
-}
-
-/* Estilos para el tema oscuro */
-.dark .redBar p {
-  color: #747474; /* Color del texto en el tema oscuro */
-}
-
-/* Estilos para el tema claro */
-.light .redBar p {
-  color: white; /* Color del texto en el tema claro */
 }

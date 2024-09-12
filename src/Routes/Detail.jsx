@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { useContextGlobalStates } from '../Components/utils/global.context';
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useContextGlobalStates } from "../Components/utils/global.context";
 
 const Detail = () => {
   const params = useParams();
@@ -16,7 +16,6 @@ const Detail = () => {
     }
     fetchData();
   }, []);
-
 
   return (
     <>
@@ -40,7 +39,7 @@ const Detail = () => {
         </tbody>
       </table>
     </>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;

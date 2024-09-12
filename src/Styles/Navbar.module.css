@@ -50,14 +50,10 @@
 .nightIcon {
   transform: rotate(45deg) scaleX(-1);
   color: #000;
-
-  /* Gira el icono horizontalmente */
 }
 
 .lightIcon {
   color: white;
-
-  /* Gira el icono horizontalmente */
 }
 
 /* Estilos para tema oscuro */

@@ -2,14 +2,12 @@
   box-sizing: border-box;
 }
 
-
 .App {
-  min-height: 100vh; /* Asegura que ocupe la pantalla completa */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribuye el contenido entre header y footer */
+  justify-content: space-between;
 }
-
 
 body {
   margin: 0;
@@ -19,20 +17,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  
   padding: 0;
-  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
-}
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -58,6 +51,7 @@ a {
   margin: 5px;
   cursor: pointer;
 }
+
 a:hover {
   color: rgb(136, 136, 136);
 }
@@ -67,16 +61,16 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  position: relative; /* Cambia absolute a relative */
+  position: relative; 
   width: 100%;
-  height: auto; /* Ajusta la altura automática para que no haya espacio extra */
-  background-color: transparent; /* Asegura que no haya un fondo blanco */
+  height: auto; 
 }
 
 footer > img {
   width: 200px;
   margin: 0;
 }
+
 footer > p {
   margin: 0;
   padding-top: 0.7rem;
@@ -93,11 +87,10 @@ form {
 
 .card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  width: 20px;
-  padding: 0.8rem 0.8rem 0 0.8rem;
+  padding: 0.8rem;
   border: 0.5px solid rgb(136, 136, 136);
   margin: 0;
 }
@@ -109,7 +102,6 @@ form {
 .card-grid {
   display: flex;
   justify-content: space-evenly;
-  
   width: 64vw;
   height: auto;
   flex-wrap: wrap;
@@ -135,6 +127,12 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+tr {
+  justify-content: center;
+}
+
+
+/* Estilos para el tema oscuro */
 .dark {
   background-color: #12121296 !important;
   color: white !important;
@@ -156,14 +154,14 @@ tr:nth-child(even) {
   color: white !important;
 }
 
-.starIcon {
-  color: yellow !important; /* Color de relleno amarillo */
-  stroke: black; /* Borde negro */
-  stroke-width: 1.2px; /* Ancho del borde */
-}
-
 .dark .starIcon {
-  color: yellow !important; /* Mantén el color amarillo en el tema oscuro */
+  color: yellow !important; 
 }
 
-/* Estilos para el tema oscuro */
+.dark .MuiTypography-root {
+  color: white;
+}
+
+.dark .MuiPaper-root {
+  background-color: #333;
+}
