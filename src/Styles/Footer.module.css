@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0px;
+  padding: 0;
 }
 
 .redBar {
@@ -16,6 +16,7 @@
   font-weight: bold;
   font-size: 1em; /* Ajuste el tamaño de la fuente si es necesario */
   margin-top: 90px;
+  cursor: pointer;
 }
 
 .footerContent {

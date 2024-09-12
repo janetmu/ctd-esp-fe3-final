@@ -64,3 +64,13 @@
   stroke-width: 1.2px; /* Ancho del borde */
 }
 
+.heartIcon {
+  color: transparent; /* Corazón sin relleno por defecto */
+  stroke: black; /* Borde negro */
+  stroke-width: 1.5px; /* Ancho del borde */
+}
+
+.heartIcon.filled {
+  color: red !important; /* Corazón relleno de rojo al seleccionarlo */
+  stroke: none; /* Sin borde cuando está relleno */
+}

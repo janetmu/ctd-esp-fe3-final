@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Brightness4, NightlightRound } from "@mui/icons-material"; // Importamos los iconos
+import { Brightness7, NightlightSharp } from "@mui/icons-material"; // Importamos los iconos
 import { routes } from "../Components/utils/routes";
 import styles from "../Styles/Navbar.module.css";
 import { useContextGlobalStates } from "./utils/global.context";
+import { IconButton } from "@mui/material";
 
 const Navbar = () => {
   const { state, dispatch } = useContextGlobalStates();
@@ -31,14 +32,14 @@ const Navbar = () => {
         </div>
 
         {/* Botón para cambiar el tema */}
-        <button className={styles.themeButton} onClick={toggleTheme}>
+        <IconButton className={styles.themeButton} onClick={toggleTheme}>
           {state.theme === "dark" ? (
-            <Brightness4 />
+            <Brightness7 />
           ) : (
-            <NightlightRound className={styles.flippedIcon} />
+            <NightlightSharp className={styles.nightIcon} />
           )}{" "}
           {/* Icono según el tema */}
-        </button>
+        </IconButton>
       </div>
     </nav>
   );

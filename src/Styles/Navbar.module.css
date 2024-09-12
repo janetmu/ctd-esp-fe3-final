@@ -61,19 +61,22 @@
   border-radius: 15%;
 }
 
-.flippedIcon {
+.nightIcon {
   transform: rotate(45deg) scaleX(-1);
-  background-color: #000;
-  color: rgb(243, 243, 199);
+  color: #000;
+  
 
   /* Gira el icono horizontalmente */
 }
+
+
 
 /* Estilos para tema oscuro */
 .dark {
   background-color: #333;
   color: #fff;
 }
+
 
 /* Estilos para tema claro */
 .light {
