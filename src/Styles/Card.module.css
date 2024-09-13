@@ -75,9 +75,17 @@
 }
 
 .starIcon {
-  color: yellow !important; 
-  stroke: black; 
-  stroke-width: 1.2px; 
+  stroke: black;
+  stroke-width: 1.2px;
+  transition: color 0.3s ease;
+}
+
+.dark .starIcon {
+  color: transparent !important;
+}
+
+.favButton:hover .starIcon {
+  color: yellow; /* Cambia a amarillo cuando el usuario hace hover */
 }
 
 
