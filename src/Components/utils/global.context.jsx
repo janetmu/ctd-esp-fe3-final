@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-export const initialState = { theme: "", data: [], dentist: {} };
+let lsFavs = JSON.parse(localStorage.getItem("favs")) || [];
+export const initialState = { theme: "", data: [], dentist: {}, favs: lsFavs };
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -10,6 +11,11 @@ const reducer = (state, action) => {
       return { ...state, dentist: action.payload };
     case "TOGGLE_THEME":
       return { ...state, theme: action.payload };
+    case "ADD_FAV":
+      return { ...state, favs: [...state.favs, action.payload] }
+    case "REMOVE_FAV":
+      const filteredFavs = state.favs.filter((fav) => fav.id !== action.payload.id);
+      return { ...state, favs: filteredFavs }
     default:
       throw new Error("Acción no existente");
   }
@@ -30,6 +36,10 @@ export const ContextProvider = ({ children }) => {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(state.favs));
+  }, [state.favs]);
 
   return (
     <ContextGlobal.Provider value={{ state, dispatch }}>

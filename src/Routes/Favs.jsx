@@ -1,14 +1,15 @@
 import React from "react";
 import Card from "../Components/Card";
+import { useContextGlobalStates } from "../Components/utils/global.context";
 
 const Favs = () => {
-  const favs = JSON.parse(localStorage.getItem("favs")) || [];
+  const { state } = useContextGlobalStates();
 
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {favs.map((dentist) => {
+        {state.favs.map((dentist) => {
           return (
             <Card
               name={dentist.name}

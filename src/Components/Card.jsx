@@ -2,22 +2,32 @@ import React from "react";
 import CardStyles from "../Styles/Card.module.css";
 import { Link } from "react-router-dom";
 import Star from "@mui/icons-material/StarPurple500Sharp";
+import CancelIcon from '@mui/icons-material/Cancel';
 import { useContextGlobalStates } from "./utils/global.context";
 import Swal from 'sweetalert2'
 
 const Card = ({ name, username, id }) => {
-  const { state } = useContextGlobalStates();
+  const { state, dispatch } = useContextGlobalStates();
+  const isFav = state.favs.find((fav) => fav.id === id);
 
   const addFav = () => {
-    let favs = JSON.parse(localStorage.getItem("favs")) || [];
-    favs.push({ id, name, username });
-    localStorage.setItem("favs", JSON.stringify(favs));
-    Swal.fire({
-      title: '¡Exitoso!',
-      text: '¡Dentista añadido a favoritos!',
-      icon: 'success',
-      confirmButtonText: 'OK'
-    });
+    if(isFav) {
+      dispatch({type: "REMOVE_FAV", payload: {name, username, id}});
+      Swal.fire({
+        title: '¡Exitoso!',
+        text: '¡Dentista eliminado de favoritos!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    } else {
+      dispatch({type: "ADD_FAV", payload: {name, username, id}});      
+      Swal.fire({
+        title: '¡Exitoso!',
+        text: '¡Dentista añadido a favoritos!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    }
   };
 
   return (
@@ -29,7 +39,7 @@ const Card = ({ name, username, id }) => {
           <p>{username}</p>
         </Link>
         <button onClick={addFav} className={CardStyles.favButton}>
-          <Star className={CardStyles.starIcon} />
+          {isFav ? <CancelIcon style={{color: 'red'}} /> : <Star className={CardStyles.starIcon} />}
         </button>
       </div>
     </div>
