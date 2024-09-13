@@ -9,16 +9,18 @@ const Favs = () => {
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {state.favs.map((dentist) => {
-          return (
-            <Card
-              name={dentist.name}
-              username={dentist.username}
-              id={dentist.id}
-              key={dentist.id}
-            />
-          );
-        })}
+        { state.favs.length > 0 ? (
+            state.favs.map((dentist) => {
+              return (
+                <Card
+                  name={dentist.name}
+                  username={dentist.username}
+                  id={dentist.id}
+                  key={dentist.id}
+                />
+              );
+            })
+          ) : ( <p style={{color:"red"}}>No hay favoritos, dirigase a la vista "Inicio" para agregarlos</p>) }
       </div>
     </>
   );

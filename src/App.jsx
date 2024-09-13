@@ -4,9 +4,9 @@ import Home from './Routes/Home'
 import Contact from './Routes/Contact'
 import Detail from './Routes/Detail'
 import Favs from './Routes/Favs'
+import Layout from "./Layouts/Layout";
 import { routes } from "./Components/utils/routes";
 import { useContextGlobalStates } from "./Components/utils/global.context";
-import Layout from "./Layouts/Layout";
 
 function App() {
   const { state } = useContextGlobalStates();
